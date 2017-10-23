@@ -77,6 +77,8 @@ function! GetJsxIndent()
 
   if (SynXMLish(prevsyn) || currline =~# '\v^\s*\<') && SynJSXContinues(cursyn, prevsyn)
     let preline = getline(v:lnum - 1)
+    " XXX colin: detect html/xml indentation instead
+    se sw=2
 
     if currline =~# '\v^\s*\/?\>'
       return preline =~# '\v^\s*\<' ? indent(v:lnum - 1) : indent(v:lnum - 1) - s:sw()
@@ -145,6 +147,8 @@ function! GetJsxIndent()
     if currline =~# '^\s*)' && SynJSXCloseTag(prevsyn)
       let ind = ind - s:sw()
     endif
+    " XXX colin: detect html/xml indentation instead
+    se sw=4
   else
     let ind = GetJavascriptIndent()
   endif
