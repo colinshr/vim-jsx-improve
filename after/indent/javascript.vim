@@ -5,6 +5,7 @@
 " Maintainer: Qiming <chemzqm@gmail.com>
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+finish
 let s:keepcpo = &cpo
 set cpo&vim
 let b:did_indent = 1
