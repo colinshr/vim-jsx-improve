@@ -3,7 +3,7 @@
 " Maintainer: Chris Paul ( https://github.com/bounceme )
 " URL: https://github.com/pangloss/vim-javascript
 " Last Change: December 1, 2016
-
+finish
 " Only load this indent file when no other was loaded.
 if exists('b:did_indent')
   finish
